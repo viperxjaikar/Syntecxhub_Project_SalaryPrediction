@@ -1,44 +1,120 @@
-# Salary Prediction Project
+📌 Salary Prediction — Syntecxhub Internship (Project 2)
 
-Simple linear regression example to predict salary from experience and test scores.
+This repository contains my solution for Project 2: Salary Prediction, completed as part of the Syntecxhub Internship Program.
 
-Files
-- `01_load_inspect.py` — load and inspect dataset
-- `02_preprocess.py` — data cleaning and preprocessing
-- `03_train.py` — train and save the best model
-- `04_predict.py` — example prediction using saved model
-- `dataset.csv`, `salary_cleaned.csv` — data files
+The project uses experience and test score to build a Salary Prediction Regression Model, compares single vs multiple linear regression models, evaluates with RMSE and R², and saves the best performing model.
 
-Requirements
-- Python 3.8+
-- pandas
-- scikit-learn
-- joblib
+✅ Project Requirements (from Syntecxhub)
 
-Install
+Use dataset containing experience, test scores, salary
 
-```powershell
-python -m pip install -r requirements.txt
-# or
-python -m pip install pandas scikit-learn joblib
-```
+Handle categorical features if present
 
-Quick usage
+Perform train/test split
 
-1. Inspect and preprocess data
-```powershell
+Train multiple linear regression
+
+Evaluate using RMSE & R²
+
+Compare single vs multiple feature models
+
+Save best model
+
+📂 Project Structure
+SalaryPrediction_Project/
+│── dataset.csv                # original dataset 
+│── salary_cleaned.csv         # cleaned dataset after preprocessing
+│── 01_load_inspect.py         # Step 1: load + inspect dataset
+│── 02_preprocess.py           # Step 2: preprocessing (handle missing data)
+│── 03_train.py                # Steps 3–6: training, evaluation, save best model
+│── 04_predict.py              # Step 7: example prediction using best model
+│── best_salary_model.pkl      # saved best ML model
+│── README.md                  # project documentation
+
+🧪 Steps Performed
+STEP 1 — Load & Inspect
+
+Checked shape, columns, data types
+
+Verified presence of required columns
+
+Checked missing values
+
+STEP 2 — Preprocess
+
+Normalized column names
+
+Converted non-numeric values
+
+Filled missing values using median
+
+Saved cleaned dataset as salary_cleaned.csv
+
+STEP 3–6 — Train & Evaluate Models
+
+Two models were trained:
+
+1️⃣ Single Feature Regression
+
+Feature: experience
+
+2️⃣ Multiple Feature Regression
+
+Features: experience, test_score
+
+Both models evaluated using:
+
+RMSE (Root Mean Squared Error)
+
+R² Score
+
+Results
+Model	RMSE	R²
+Single Feature	9743.88	0.5516
+Multiple Feature	9651.39	0.5601
+
+👉 Best Model: Multiple Linear Regression
+Saved as: best_salary_model.pkl
+
+🎯 STEP 7 — Example Prediction
+
+Using 04_predict.py:
+
+Experience = 5
+Test Score = 80
+Predicted Salary ≈ 56,000+
+
+
+(Values may vary slightly.)
+
+▶️ How to Run the Project
+Install dependencies:
+pip install pandas scikit-learn joblib
+
+Run scripts in order:
 python 01_load_inspect.py
 python 02_preprocess.py
-```
-2. Train model
-```powershell
 python 03_train.py
-```
-3. Make a prediction
-```powershell
 python 04_predict.py
-```
 
-Notes
-- Pushing to GitHub requires you to have git installed and authentication set up (HTTPS with PAT or SSH key).
-- If `requirements.txt` is not present, install the packages listed under Requirements manually.
+📝 Internship Submission Checklist
+
+ Completed Project 2
+
+ Shared internship status on LinkedIn & tagged @Syntecxhub
+
+ Uploaded full source code to GitHub
+
+ Repository name format:
+
+Syntecxhub_Project_SalaryPrediction
+
+👨‍💻 Author
+
+Your Name
+LinkedIn: add your profile link
+GitHub: add your link
+
+⭐ Thank You
+
+If you found this project helpful, please ⭐ the repository!
